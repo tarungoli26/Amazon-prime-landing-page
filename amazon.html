@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Video Landing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    background:#00050d;
+    color:white;
+}
+
+header{
+    height:70px;
+    background:#0f171e;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 50px;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.logo{
+    width:110px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+.right-nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.join-btn{
+    background:#1a98ff;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.hero{
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(to right,#000 40%,rgba(0,0,0,.35) 60%,transparent),
+    url('https://m.media-amazon.com/images/G/31/AmazonVideo/2019/MLP.jpg');
+    background-size:cover;
+    background-position:right center;
+    background-repeat:no-repeat;
+}
+
+.hero-content{
+    width:50%;
+    padding-left:70px;
+}
+
+.hero h1{
+    font-size:64px;
+    margin-bottom:35px;
+}
+
+.hero p{
+    font-size:24px;
+    line-height:1.5;
+    margin-bottom:40px;
+}
+
+.white-btn{
+    background:white;
+    color:black;
+    border:none;
+    padding:18px 35px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+.rentals{
+    min-height:720px;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(to right,#000 42%,rgba(0,0,0,.35) 60%,transparent),
+    url('https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/MLP/TVOD/TVOD_MLP_Right.jpg');
+    background-size:cover;
+    background-position:right center;
+    background-repeat:no-repeat;
+}
+
+.rentals-content{
+    width:50%;
+    padding-left:70px;
+}
+
+.rentals h2{
+    font-size:58px;
+    margin-bottom:35px;
+}
+
+.rentals p{
+    font-size:22px;
+    margin-bottom:40px;
+    line-height:1.5;
+}
+
+.subscription{
+    min-height:650px;
+    background:#00050d;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:80px;
+    gap:50px;
+}
+
+.sub-left{
+    flex:1;
+}
+
+.sub-left h2{
+    font-size:60px;
+    margin-bottom:30px;
+}
+
+.sub-left p{
+    font-size:22px;
+    line-height:1.5;
+}
+
+.sub-grid{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+
+.card{
+    height:180px;
+    border-radius:10px;
+    overflow:hidden;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.card:hover{
+    transform:scale(1.04);
+}
+
+footer{
+    background:#222;
+    text-align:center;
+    padding:25px 20px;
+}
+
+footer img{
+    width:120px;
+    margin-bottom:10px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:10px;
+    flex-wrap:wrap;
+}
+.footer-links a{
+    color:#79b8ff;
+    text-decoration:none;
+}
+
+footer p{
+    color:#949494;
+    font-size:14px;
+}
+
+@media(max-width:1100px){
+
+.hero,
+.rentals{
+    min-height:auto;
+    padding:100px 0;
+}
+
+.hero-content,
+.rentals-content{
+    width:100%;
+    padding:40px;
+}
+
+.subscription{
+    flex-direction:column;
+}
+
+.sub-grid{
+    width:100%;
+}
+
+.hero h1,
+.rentals h2,
+.sub-left h2{
+    font-size:42px;
+}
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+    gap:20px;
+}
+
+.logo-section{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.hero h1,
+.rentals h2{
+    font-size:36px;
+}
+
+.hero p,
+.rentals p,
+.sub-left p{
+    font-size:18px;
+}
+
+.sub-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.card{
+    height:130px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-section">
+
+<img
+class="logo"
+src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png"
+alt="Prime Video">
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Free to me</a></li>
+<li><a href="#">Movies</a></li>
+<li><a href="#">TV shows</a></li>
+<li><a href="#">Live TV</a></li>
+<li><a href="#">Subscriptions</a></li>
+</ul>
+</nav>
+
+</div>
+
+<div class="right-nav">
+<span>EN</span>
+<button class="join-btn">Join Prime</button>
+</div>
+
+</header>
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Welcome to Prime Video</h1>
+
+<p>
+Join Prime to watch the latest movies,
+TV shows and award-winning Amazon Originals
+</p>
+
+<button class="white-btn">
+Sign in to join Prime
+</button>
+
+</div>
+
+</section>
+
+<section class="rentals">
+
+<div class="rentals-content">
+
+<h2>
+Movie rentals on Prime Video
+</h2>
+
+<p>
+Early Access to new movies,
+before digital subscription
+</p>
+
+<button class="white-btn">
+Rent now
+</button>
+
+</div>
+
+</section>
+
+<section class="subscription">
+
+<div class="sub-left">
+
+<h2>
+Your favorite subscriptions all in one place
+</h2>
+
+<p>
+Customers can subscribe to get access to a variety
+of premium and specialty content, easily accessible
+within the Prime Video app.
+</p>
+
+</div>
+
+<div class="sub-grid">
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_AppleTV._AC_SX400_QL80_FP_.jpg" alt="">
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Moviesphere._AC_SX400_QL80_FP_.jpg" alt="">
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Lionsgateplay._AC_SX400_QL80_FP_.jpg" alt="">
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Goldminesplay._AC_SX400_QL80_FP_.jpg" alt="">
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Animetimes._AC_SX400_QL80_FP_.jpg" alt="">
+</div>
+<div class="card">
+<img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Manoramamax._AC_SX400_QL80_FP_.jpg" alt="">
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Chaupal._AC_SX400_QL80_FP_.jpg" alt="">
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_BBCPlayer._AC_SX400_QL80_FP_.jpg" alt="">
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_NBA._AC_SX400_QL80_FP_.jpg" alt="">
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<img
+src="https://m.media-amazon.com/images/G/01/digital/video/acquisition/logo/pv_logo_white._CB548637580_.png"
+alt="Prime Video">
+
+<div class="footer-links">
+<a href="#">Terms and Privacy Notice</a>
+<a href="#">Send us feedback</a>
+<a href="#">Help</a>
+</div>
+
+<p>
+© 1996-2026, Amazon.com, Inc. or its affiliates
+</p>
+
+</footer>
+
+</body>
+</html>
